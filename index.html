@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Un nuevo comienzo</title>
+  <title>Si tú me olvidaste a las 12…</title>
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9uZG8lMjByb21hbnRpY298ZW58MHx8MHx8fDA%3D') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?fm=jpg&q=60&w=3000') no-repeat center center fixed;
       background-size: cover;
       color: #5c3d4f;
     }
@@ -20,7 +20,7 @@
       border-radius: 15px;
     }
     header {
-      background-image: url('https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW1vcnxlbnwwfHwwfHx8MA%3D%3D');
+      background-image: url('https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?fm=jpg&q=60&w=3000');
       background-size: cover;
       background-position: center;
       height: 90vh;
@@ -32,8 +32,9 @@
     }
     header h1 {
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      padding: 30px;
       border-radius: 10px;
+      font-size: 2em;
     }
     .galeria {
       display: grid;
@@ -72,28 +73,46 @@
     .oculto {
       display: none;
     }
-    .promesas, .playlist, .frases, .historia, .detalles {
+    .promesas, .playlist, .frases, .historia, .detalles, .razones, .cartas-emocionales {
       margin-top: 40px;
       padding: 20px;
       background-color: #ffe6f0;
       border-radius: 10px;
     }
-    .promesas ul, .frases ul, .historia ul, .detalles ul {
+    .promesas ul, .frases ul, .historia ul, .detalles ul, .razones ul {
       list-style-type: none;
       padding-left: 20px;
     }
-    .frases ul li::before {
-      content: "💌 ";
-    }
-    .promesas ul li::before {
-      content: "❤️ ";
-    }
-    .detalles ul li::before {
-      content: "💗 ";
-    }
+    .frases ul li::before { content: "💌 "; }
+    .promesas ul li::before { content: "❤️ "; }
+    .detalles ul li::before { content: "💗 "; }
+    .razones ul li::before { content: "🌹 "; }
     .historia ul li {
       margin-bottom: 10px;
       font-size: 1.1em;
+    }
+    .cartas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .cartas-grid button {
+      flex: 1 1 200px;
+      padding: 10px;
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .carta-emocional {
+      background-color: white;
+      padding: 15px;
+      border-left: 4px solid #cc3366;
+      border-radius: 8px;
+      font-style: italic;
+      display: none;
     }
     footer {
       margin-top: 50px;
@@ -128,36 +147,28 @@
 <body>
   <div class="flores"></div>
   <img class="hello-kitty" src="https://i0.wp.com/www.di-conexiones.com/wp-content/uploads/2024/12/hello_kitty_50_di-conexiones_01.jpg?resize=720%2C346&ssl=1" alt="Hello Kitty">
+
   <header>
-    <h1>Un nuevo comienzo<br>para lo que nunca dejó de ser amor</h1>
+    <h1>Si tú me olvidaste a las 12…<br>yo empecé a amarte de verdad a las 12 con un segundo</h1>
   </header>
+
   <div class="container">
     <section class="carta-preview">
-      <p>Para Ileana Vega, la mujer que amo y seguiré eligiendo cada día...<br>
-      Hoy quiero hablarte desde lo más profundo de mi corazón...</p>
+      <p>Para Ileana Vega, la mujer que amo y seguiré eligiendo cada día...<br>Hoy quiero hablarte desde lo más profundo de mi corazón...</p>
       <button class="leer-mas" onclick="document.getElementById('carta-completa').style.display='block'; this.style.display='none'">Leer más</button>
       <div id="carta-completa" class="oculto">
-        <p>Han pasado 17 años desde que un “sí” cambió nuestras vidas. A lo largo de ese tiempo, compartimos risas, sueños, días simples y momentos difíciles… y a pesar de todo, tú siempre fuiste el centro de mi mundo. Me he equivocado, lo sé. Tal vez no supe demostrarte todo lo que significas para mí como debí hacerlo. Pero nunca dejé de amarte.<br><br>
-        Este no es un intento desesperado, es un recordatorio. De lo que fuimos. De lo que aún podemos ser. Porque yo creo en nosotros. Porque te amo con un amor que no se apaga con la rutina ni con los errores, sino que se fortalece con la voluntad de reconstruir.<br><br>
-        No quiero que esta sea una despedida. Quiero que sea un nuevo comienzo. Estoy aquí, no solo con palabras, sino con acciones. Estoy dispuesto a cambiar, a crecer, a caminar contigo de nuevo, si tú lo permites.<br><br>
-        Gracias por todo lo que has sido para mí. Gracias por cada momento compartido. Solo espero, desde lo más sincero de mi ser, que esta carta sea una semilla de esperanza para los dos.</p>
+        <p>Han pasado 17 años desde que un “sí” cambió nuestras vidas. Compartimos risas, sueños, días simples y momentos difíciles… tú siempre fuiste el centro de mi mundo. Me equivoqué, pero nunca dejé de amarte.<br><br>
+        Este no es un intento desesperado, es un recordatorio. De lo que fuimos. De lo que aún podemos ser. Porque te amo con un amor que no se apaga con la rutina, sino que se fortalece con voluntad.<br><br>
+        No quiero una despedida. Quiero un nuevo comienzo. Estoy aquí, no solo con palabras, sino con acciones. Gracias por todo. Que esta carta sea una semilla de esperanza.</p>
       </div>
     </section>
 
     <section class="galeria">
-      <div class="foto"><img src="img/1.jpg"><p>Tu sonrisa es mi lugar feliz.</p></div>
-      <div class="foto"><img src="img/2.jpg"><p>Cuando me amabas.</p></div>
-      <div class="foto"><img src="img/3.jpg"><p>Amarte es lo más fácil que he hecho.</p></div>
-      <div class="foto"><img src="img/4.jpeg"><p>Juntos, siempre mejores.</p></div>
-      <div class="foto"><img src="img/5.jpeg"><p>Tu mirada dice más que mil palabras.</p></div>
-      <div class="foto"><img src="img/6.jpeg"><p>Así se ve la felicidad.</p></div>
-      <div class="foto"><img src="img/7.jpeg"><p>Un instante, una eternidad contigo.</p></div>
-      <div class="foto"><img src="img/8.jpeg"><p>Eres la poesía en mi caos.</p></div>
-      <div class="foto"><img src="img/9.jpeg"><p>Te elijo todos los días.</p></div>
-      <div class="foto"><img src="img/10.jpeg"><p>Un recuerdo más que atesoro.</p></div>
-      <div class="foto"><img src="img/11.jpeg"><p>Mi amor, mi todo.</p></div>
-      <div class="foto"><img src="img/12.jpeg"><p>Contigo, cualquier lugar es hogar.</p></div>
-
+      <!-- Usa estas imágenes de ejemplo -->
+      <div class="foto"><img src="https://source.unsplash.com/featured/?love,smile" alt=""><p>Tu sonrisa es mi lugar feliz.</p></div>
+      <div class="foto"><img src="https://source.unsplash.com/featured/?couple,hug" alt=""><p>Cuando me amabas.</p></div>
+      <div class="foto"><img src="https://source.unsplash.com/featured/?kiss,couple" alt=""><p>Amarte es lo más fácil que he hecho.</p></div>
+      <div class="foto"><img src="https://source.unsplash.com/featured/?wedding" alt=""><p>Juntos, siempre mejores.</p></div>
     </section>
 
     <section class="promesas">
@@ -171,58 +182,38 @@
       </ul>
     </section>
 
-    <section class="frases">
-      <h2>Frases para ti</h2>
+    <section class="razones">
+      <h2>¿Por qué luchar por ti?</h2>
       <ul>
-        <li>Y pensé en flores... porque son bonitas como tú.</li>
-        <li>Amarte ha sido mi lección más bonita.</li>
-        <li>No quiero un final feliz, quiero una historia sin final contigo.</li>
-        <li>Desde los pequeños detalles, empieza el amor verdadero.</li>
-        <li>Eres lo mejor que me ha pasado.</li>
-        <li>Jamás cruzó por mi mente dejarte.</li>
-        <li>Fui un estúpido que quiere recuperar el tiempo.</li>
+        <li>Porque sin ti no me reconozco.</li>
+        <li>Porque tu amor me transformó.</li>
+        <li>Porque aún tengo tanto que darte.</li>
+        <li>Porque somos un equipo, incluso cuando todo se complica.</li>
+        <li>Porque creo en nosotros más que nunca.</li>
+        <li>Porque tú eres mi hogar, no un lugar.</li>
       </ul>
     </section>
 
-    <section class="historia">
-      <h2>Nuestra historia</h2>
-      <ul>
-        <li><strong>2008:</strong> Nos conocimos y empezó todo.</li>
-        <li><strong>28/10/2009:</strong> Nació nuestro primer gran amor, Andree.</li>
-        <li><strong>21/07/2011:</strong> Llegó nuestra dulce Samadhi.</li>
-        <li><strong>13/02/2014:</strong> Nos comprometimos ante la sociedad.</li>
-        <li><strong>17/06/2015:</strong> Nació nuestra alegría llamada Eileen.</li>
-        <li><strong>18/08/2023:</strong> Kai llegó a completar nuestra familia.</li>
-      </ul>
-    </section>
-
-    <section class="detalles">
-      <h2>Detalles que amo de ti</h2>
-      <ul>
-        <li>Tu risa cuando ves memes tontos.</li>
-        <li>Tus besos.</li>
-        <li>Cómo eres madre con mis hijos.</li>
-        <li>Tus peleas (sí, también esas 😅).</li>
-        <li>Tu fuerza.</li>
-        <li>Tu cara.</li>
-        <li>Tu olor.</li>
-        <li><strong>Pero lo que más amo es lo que soy yo cuando estoy contigo.</strong></li>
-      </ul>
-    </section>
-
-    <section class="playlist">
-      <h2>Nuestra música</h2>
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://www.youtube.com/embed/KNZH-emehxA?autoplay=1&loop=1&playlist=KNZH-emehxA"></iframe>
-      <p><strong>Playlist:</strong></p>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=V2eocmz9HUY" target="_blank">Canción para ti 1</a></li>
-        <li><a href="https://www.youtube.com/watch?v=lIDL5-Yqs3g" target="_blank">Canción para ti 2</a></li>
-        <li><a href="https://www.youtube.com/watch?v=s3O_LUCMuA8" target="_blank">Canción para ti 3</a></li>
-        <li><a href="https://www.youtube.com/watch?v=txFx1aR91XQ" target="_blank">Canción para ti 4</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Ek4bQ4HEhJc" target="_blank">Canción para ti 5</a></li>
-        <li><a href="https://www.youtube.com/watch?v=a0-6lEdm93k" target="_blank">Canción para ti 6</a></li>
-      </ul>
+    <section class="cartas-emocionales">
+      <h2>Abrir cuando...</h2>
+      <div class="cartas-grid">
+        <button onclick="mostrarCarta('enojo')">Estés enojada conmigo</button>
+        <button onclick="mostrarCarta('duda')">Dudes de mi amor</button>
+        <button onclick="mostrarCarta('soledad')">Te sientas sola</button>
+        <button onclick="mostrarCarta('extrañar')">Me extrañes</button>
+      </div>
+      <div id="carta-enojo" class="carta-emocional">
+        <p>Si estás enojada, lo entiendo. No soy perfecto y te he fallado. Pero estoy aquí, dispuesto a aprender de mis errores, a escucharte, a no huir. Porque te respeto y porque te amo.</p>
+      </div>
+      <div id="carta-duda" class="carta-emocional">
+        <p>Cuando dudes de mi amor, solo recuerda lo que estamos construyendo. Puede que no siempre lo demuestre bien, pero nunca ha dejado de estar aquí... latiendo por ti.</p>
+      </div>
+      <div id="carta-soledad" class="carta-emocional">
+        <p>Si te sientes sola, abre esta carta sabiendo que yo te pienso cada día. Aunque estemos distantes, tú estás conmigo. En mi mente, en mi alma y en mi corazón.</p>
+      </div>
+      <div id="carta-extrañar" class="carta-emocional">
+        <p>¿Me extrañas? Yo también. Cada minuto sin ti me recuerda cuánto significas para mí. Espero poder abrazarte pronto, como si el tiempo no hubiera pasado.</p>
+      </div>
     </section>
 
     <footer>
@@ -231,5 +222,12 @@
       <a href="https://www.facebook.com/ileana.vgsl" target="_blank" style="color:white; text-decoration:underline;">Tu Facebook</a>
     </footer>
   </div>
+
+  <script>
+    function mostrarCarta(tipo) {
+      document.querySelectorAll('.carta-emocional').forEach(div => div.style.display = 'none');
+      document.getElementById('carta-' + tipo).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
