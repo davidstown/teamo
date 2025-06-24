@@ -29,11 +29,6 @@
       align-items: center;
       text-align: center;
       color: white;
-      animation: fadeIn 3s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     header h1 {
       background-color: rgba(0, 0, 0, 0.5);
@@ -48,15 +43,10 @@
     }
     .foto {
       text-align: center;
-      transition: transform 0.3s;
-    }
-    .foto:hover {
-      transform: scale(1.05);
     }
     .foto img {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .foto p {
       margin-top: 5px;
@@ -82,15 +72,28 @@
     .oculto {
       display: none;
     }
-    .promesas, .playlist, .frases {
+    .promesas, .playlist, .frases, .historia, .detalles {
       margin-top: 40px;
       padding: 20px;
       background-color: #ffe6f0;
       border-radius: 10px;
     }
-    .promesas ul, .frases ul {
-      list-style: heart;
+    .promesas ul, .frases ul, .historia ul, .detalles ul {
+      list-style-type: none;
       padding-left: 20px;
+    }
+    .frases ul li::before {
+      content: "💌 ";
+    }
+    .promesas ul li::before {
+      content: "❤️ ";
+    }
+    .detalles ul li::before {
+      content: "💗 ";
+    }
+    .historia ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
     }
     footer {
       margin-top: 50px;
@@ -117,10 +120,8 @@
       position: fixed;
       bottom: 10px;
       right: 10px;
-      width: 100px;
+      width: 80px;
       z-index: 999;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -144,18 +145,7 @@
     </section>
 
     <section class="galeria">
-      <div class="foto"><img src="img/1.jpg"><p>Tu sonrisa es mi lugar feliz.</p></div>
-      <div class="foto"><img src="img/2.jpg"><p>En tus ojos encontré mi paz.</p></div>
-      <div class="foto"><img src="img/3.jpg"><p>Amarte es lo más fácil que he hecho.</p></div>
-      <div class="foto"><img src="img/4.jpeg"><p>Juntos, siempre mejores.</p></div>
-      <div class="foto"><img src="img/5.jpeg"><p>Tu mirada dice más que mil palabras.</p></div>
-      <div class="foto"><img src="img/6.jpeg"><p>Así se ve la felicidad.</p></div>
-      <div class="foto"><img src="img/7.jpeg"><p>Un instante, una eternidad contigo.</p></div>
-      <div class="foto"><img src="img/8.jpeg"><p>Eres la poesía en mi caos.</p></div>
-      <div class="foto"><img src="img/9.jpeg"><p>Te elijo todos los días.</p></div>
-      <div class="foto"><img src="img/10.jpeg"><p>Un recuerdo más que atesoro.</p></div>
-      <div class="foto"><img src="img/11.jpeg"><p>Mi amor, mi todo.</p></div>
-      <div class="foto"><img src="img/12.jpeg"><p>Contigo, cualquier lugar es hogar.</p></div>
+      <!-- Tus imágenes van aquí como ya las tenías -->
     </section>
 
     <section class="promesas">
@@ -176,6 +166,35 @@
         <li>Amarte ha sido mi lección más bonita.</li>
         <li>No quiero un final feliz, quiero una historia sin final contigo.</li>
         <li>Desde los pequeños detalles, empieza el amor verdadero.</li>
+        <li>Eres lo mejor que me ha pasado.</li>
+        <li>Jamás cruzó por mi mente dejarte.</li>
+        <li>Fui un estúpido que quiere recuperar el tiempo.</li>
+      </ul>
+    </section>
+
+    <section class="historia">
+      <h2>Nuestra historia</h2>
+      <ul>
+        <li><strong>2008:</strong> Nos conocimos y empezó todo.</li>
+        <li><strong>28/10/2009:</strong> Nació nuestro primer gran amor, Andree.</li>
+        <li><strong>21/07/2011:</strong> Llegó nuestra dulce Samadhi.</li>
+        <li><strong>13/02/2014:</strong> Nos comprometimos ante la sociedad.</li>
+        <li><strong>17/06/2015:</strong> Nació nuestra alegría llamada Eileen.</li>
+        <li><strong>18/08/2023:</strong> Kai llegó a completar nuestra familia.</li>
+      </ul>
+    </section>
+
+    <section class="detalles">
+      <h2>Detalles que amo de ti</h2>
+      <ul>
+        <li>Tu risa cuando ves memes tontos.</li>
+        <li>Tus besos.</li>
+        <li>Cómo eres madre con mis hijos.</li>
+        <li>Tus peleas (sí, también esas 😅).</li>
+        <li>Tu fuerza.</li>
+        <li>Tu cara.</li>
+        <li>Tu olor.</li>
+        <li><strong>Pero lo que más amo es lo que soy yo cuando estoy contigo.</strong></li>
       </ul>
     </section>
 
