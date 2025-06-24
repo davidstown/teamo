@@ -29,6 +29,11 @@
       align-items: center;
       text-align: center;
       color: white;
+      animation: fadeIn 3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     header h1 {
       background-color: rgba(0, 0, 0, 0.5);
@@ -43,10 +48,15 @@
     }
     .foto {
       text-align: center;
+      transition: transform 0.3s;
+    }
+    .foto:hover {
+      transform: scale(1.05);
     }
     .foto img {
       width: 100%;
       border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .foto p {
       margin-top: 5px;
@@ -107,14 +117,16 @@
       position: fixed;
       bottom: 10px;
       right: 10px;
-      width: 80px;
+      width: 100px;
       z-index: 999;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
   <div class="flores"></div>
-  <img class="hello-kitty" src="https://upload.wikimedia.org/wikipedia/en/0/02/Hello_Kitty_character_portrait.png" alt="Hello Kitty">
+  <img class="hello-kitty" src="https://i0.wp.com/www.di-conexiones.com/wp-content/uploads/2024/12/hello_kitty_50_di-conexiones_01.jpg?resize=720%2C346&ssl=1" alt="Hello Kitty">
   <header>
     <h1>Un nuevo comienzo<br>para lo que nunca dejó de ser amor</h1>
   </header>
@@ -132,18 +144,18 @@
     </section>
 
     <section class="galeria">
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.48.54 AM.jpeg"><p>Tu sonrisa es mi lugar feliz.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.42.53 AM.jpeg"><p>En tus ojos encontré mi paz.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.26.56 AM.jpeg"><p>Amarte es lo más fácil que he hecho.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.26.56 AM (1).jpeg"><p>Juntos, siempre mejores.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.26.55 AM.jpeg"><p>Tu mirada dice más que mil palabras.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.26.55 AM (3).jpeg"><p>Así se ve la felicidad.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.26.55 AM (2).jpeg"><p>Un instante, una eternidad contigo.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-24 at 9.26.55 AM (1).jpeg"><p>Eres la poesía en mi caos.</p></div>
-      <div class="foto"><img src="/img/WhatsApp Image 2025-06-23 at 9.20.24 PM.jpeg"><p>Te elijo todos los días.</p></div>
-      <div class="foto"><img src="/img/3.jpg"><p>Un recuerdo más que atesoro.</p></div>
-      <div class="foto"><img src="/img/2.jpg"><p>Mi amor, mi todo.</p></div>
-      <div class="foto"><img src="/img/1.jpg"><p>Contigo, cualquier lugar es hogar.</p></div>
+      <div class="foto"><img src="img/1.jpg"><p>Tu sonrisa es mi lugar feliz.</p></div>
+      <div class="foto"><img src="img/2.jpg"><p>En tus ojos encontré mi paz.</p></div>
+      <div class="foto"><img src="img/3.jpg"><p>Amarte es lo más fácil que he hecho.</p></div>
+      <div class="foto"><img src="img/4.jpeg"><p>Juntos, siempre mejores.</p></div>
+      <div class="foto"><img src="img/5.jpeg"><p>Tu mirada dice más que mil palabras.</p></div>
+      <div class="foto"><img src="img/6.jpeg"><p>Así se ve la felicidad.</p></div>
+      <div class="foto"><img src="img/7.jpeg"><p>Un instante, una eternidad contigo.</p></div>
+      <div class="foto"><img src="img/8.jpeg"><p>Eres la poesía en mi caos.</p></div>
+      <div class="foto"><img src="img/9.jpeg"><p>Te elijo todos los días.</p></div>
+      <div class="foto"><img src="img/10.jpeg"><p>Un recuerdo más que atesoro.</p></div>
+      <div class="foto"><img src="img/11.jpeg"><p>Mi amor, mi todo.</p></div>
+      <div class="foto"><img src="img/12.jpeg"><p>Contigo, cualquier lugar es hogar.</p></div>
     </section>
 
     <section class="promesas">
@@ -178,6 +190,7 @@
         <li><a href="https://www.youtube.com/watch?v=s3O_LUCMuA8" target="_blank">Canción para ti 3</a></li>
         <li><a href="https://www.youtube.com/watch?v=txFx1aR91XQ" target="_blank">Canción para ti 4</a></li>
         <li><a href="https://www.youtube.com/watch?v=Ek4bQ4HEhJc" target="_blank">Canción para ti 5</a></li>
+        <li><a href="https://www.youtube.com/watch?v=a0-6lEdm93k" target="_blank">Canción para ti 6</a></li>
       </ul>
     </section>
 
