@@ -5,59 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Un nuevo comienzo</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background: url('https://i.imgur.com/YwjvmYM.png') repeat;
-      background-size: contain;
+      background: url('https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW1vcnxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+      background-size: cover;
       color: #5c3d4f;
-      display: grid;
-      grid-template-columns: 1fr minmax(auto, 900px) 1fr;
     }
-    main {
-      grid-column: 2;
-      background-color: rgba(255,255,255,0.95);
-      padding: 30px;
-      border-radius: 12px;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
     }
     header {
-      background-image: url('https://i.imgur.com/rZTx15s.jpeg');
+      background-image: url('img/WhatsApp Image 2025-06-24 at 9.48.54 AM.jpeg');
       background-size: cover;
       background-position: center;
-      height: 90vh;
+      height: 70vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
-      grid-column: 1 / -1;
     }
     header h1 {
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-radius: 10px;
-    }
-    .carta-preview, .promesas, .playlist, .galeria, .frases-amor {
-      margin-bottom: 40px;
-    }
-    .carta-preview {
-      background-color: #fff8fa;
-      padding: 20px;
-      border-left: 5px solid #b84a62;
-      font-style: italic;
-    }
-    .leer-mas {
-      background-color: #b84a62;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
+      font-size: 1.5rem;
     }
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      margin: 30px 0;
     }
     .foto {
       text-align: center;
@@ -67,160 +53,141 @@
       border-radius: 10px;
     }
     .foto p {
-      font-size: 0.9em;
+      margin-top: 5px;
+      font-size: 0.85em;
       color: #87465b;
-      margin-top: 8px;
     }
-    .promesas, .frases-amor {
-      background-color: #fce5ec;
-      border-radius: 10px;
+    .carta-preview {
+      background-color: #fff1f6;
       padding: 20px;
+      margin-top: 30px;
+      border-left: 4px solid #cc3366;
+      font-style: italic;
     }
-    .promesas ul, .frases-amor ul {
+    .leer-mas {
+      background-color: #cc3366;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .oculto {
+      display: none;
+    }
+    .promesas, .playlist, .frases {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #ffe6f0;
+      border-radius: 10px;
+    }
+    .promesas ul, .frases ul {
       list-style: heart;
       padding-left: 20px;
     }
-    .playlist, .redes {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .redes a {
-      color: #b84a62;
-      text-decoration: none;
-      font-weight: bold;
-    }
     footer {
-      background-color: #b84a62;
-      color: white;
+      margin-top: 50px;
       text-align: center;
-      padding: 20px;
-      grid-column: 1 / -1;
+      color: white;
+      background-color: #cc3366;
+      padding: 15px;
+      border-radius: 0 0 15px 15px;
     }
-    .firma {
-      font-family: 'Brush Script MT', cursive;
-      font-size: 1.8em;
-      margin-top: 20px;
+    .flores {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://png.pngtree.com/png-vector/20220606/ourmid/pngtree-hand-painted-flowers-vintage-romantic-background-png-image_4840582.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left top;
+      opacity: 0.1;
     }
-    aside {
-      padding: 20px;
-      font-size: 0.9em;
-      color: #6e4b50;
+    .kitty {
+      width: 60px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
     }
-    aside::before {
-      content: '🌸';
-      display: block;
-      font-size: 2em;
-      margin-bottom: 10px;
+    @media screen and (max-width: 600px) {
+      header {
+        height: 50vh;
+      }
+      header h1 {
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="flores"></div>
+  <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Hello_Kitty_character_portrait.png" alt="Hello Kitty" class="kitty">
   <header>
     <h1>Un nuevo comienzo<br>para lo que nunca dejó de ser amor</h1>
   </header>
-
-  <aside>
-    <div class="redes">
-      <h3>Redes de Ileana 💖</h3>
-      <a href="https://www.facebook.com/ileana.vgsl" target="_blank">Facebook de Ileana</a>
-    </div>
-    <div class="frases-amor">
-      <h3>Frases de Amor</h3>
-      <ul>
-        <li>Si pudiera volver atrás, te elegiría mil veces más.</li>
-        <li>No quiero un final feliz, quiero un siempre contigo.</li>
-        <li>Todo lo que soy, cambió por ti.</li>
-        <li>Mis errores me alejaron, pero el amor me trajo de vuelta.</li>
-      </ul>
-    </div>
-  </aside>
-
-  <main>
+  <div class="container">
     <section class="carta-preview">
-      <h2>Carta para Ileana</h2>
-      Para Ileana Vega, la mujer que amo y seguiré eligiendo cada día:<br><br>
-      Hoy quiero hablarte desde lo más profundo de mi corazón, sin filtros...<br><br>
-      <button class="leer-mas" onclick="mostrarCarta()">Leer carta completa</button>
-      <div id="cartaCompleta" style="display:none; margin-top:15px;">
-        Han pasado 17 años desde que un “sí” cambió nuestras vidas... (texto completo aquí)
-        <br><br>Con todo mi amor,<br>David
+      <p>Para Ileana Vega, la mujer que amo y seguiré eligiendo cada día...<br>
+      Hoy quiero hablarte desde lo más profundo de mi corazón...</p>
+      <button class="leer-mas" onclick="document.getElementById('carta-completa').style.display='block'; this.style.display='none'">Leer más</button>
+      <div id="carta-completa" class="oculto">
+        <p>Han pasado 17 años desde que un “sí” cambió nuestras vidas... (resto de la carta)</p>
       </div>
     </section>
 
     <section class="galeria">
-      <h2>Galería de Recuerdos</h2>
-      <div class="foto">
-        <img src="https://i.imgur.com/rZTx15s.jpeg" alt="Foto 1" />
-        <p>Donde todo empezó 💫</p>
-      </div>
-      <div class="foto">
-        <img src="https://i.imgur.com/UGhEt0r.jpeg" alt="Foto 2" />
-        <p>Tu sonrisa es mi hogar 🏡</p>
-      </div>
-      <div class="foto">
-        <img src="https://i.imgur.com/cZ3xu3T.jpeg" alt="Foto 3" />
-        <p>Risas que no se olvidan 😄</p>
-      </div>
-      <div class="foto">
-        <img src="https://i.imgur.com/KZjFr7U.jpeg" alt="Foto 4" />
-        <p>Contigo, cualquier lugar es mágico ✨</p>
-      </div>
-      <div class="foto">
-        <img src="https://i.imgur.com/yONfTzC.jpeg" alt="Foto 5" />
-        <p>Momentos que valen toda la vida 💕</p>
-      </div>
+      <!-- Aquí van las imágenes con sus comentarios -->
     </section>
 
     <section class="promesas">
-      <h2>Promesas para ti</h2>
+      <h2>Mis promesas para ti</h2>
       <ul>
-        <li>Te prometo escucharte con el corazón, no solo con los oídos.</li>
-        <li>Te prometo cuidar de tu paz emocional como si fuera mi mayor tesoro.</li>
-        <li>Te prometo ser constante, no perfecto, pero sí honesto.</li>
-        <li>Te prometo nunca más darte razones para llorar por mi culpa.</li>
-        <li>Te prometo caminar a tu lado, como pareja y apoyo incondicional.</li>
+        <li>Escucharte con el corazón, no solo con los oídos.</li>
+        <li>Cuidar tu paz emocional como si fuera mi mayor tesoro.</li>
+        <li>Ser constante y honesto cada día.</li>
+        <li>Nunca más darte razones para llorar por mí.</li>
+        <li>Caminar a tu lado como tu pareja y tu amigo incondicional.</li>
+      </ul>
+    </section>
+
+    <section class="frases">
+      <h2>Frases para ti</h2>
+      <ul>
+        <li>Y pensé en flores... porque son bonitas como tú.</li>
+        <li>Amarte ha sido mi lección más bonita.</li>
+        <li>No quiero un final feliz, quiero una historia sin final contigo.</li>
+        <li>Desde los pequeños detalles, empieza el amor verdadero.</li>
       </ul>
     </section>
 
     <section class="playlist">
-      <h2>Playlist de Nosotros</h2>
+      <h2>Nuestra música</h2>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://www.youtube.com/embed/KNZH-emehxA?autoplay=1&loop=1&playlist=KNZH-emehxA"></iframe>
+      <p><strong>Playlist:</strong></p>
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=V2eocmz9HUY" target="_blank">🎵 Canción 1</a></li>
-        <li><a href="https://www.youtube.com/watch?v=lIDL5-Yqs3g" target="_blank">🎵 Canción 2</a></li>
-        <li><a href="https://www.youtube.com/watch?v=s3O_LUCMuA8" target="_blank">🎵 Canción 3</a></li>
-        <li><a href="https://www.youtube.com/watch?v=txFx1aR91XQ" target="_blank">🎵 Canción 4</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Ek4bQ4HEhJc" target="_blank">🎵 Canción 5</a></li>
+        <li><a href="https://www.youtube.com/watch?v=V2eocmz9HUY" target="_blank">Canción 1</a></li>
+        <li><a href="https://www.youtube.com/watch?v=lIDL5-Yqs3g" target="_blank">Canción 2</a></li>
+        <li><a href="https://www.youtube.com/watch?v=s3O_LUCMuA8" target="_blank">Canción 3</a></li>
+        <li><a href="https://www.youtube.com/watch?v=txFx1aR91XQ" target="_blank">Canción 4</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Ek4bQ4HEhJc" target="_blank">Canción 5</a></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Video principal</h2>
-      <div style="text-align:center">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/KNZH-emehxA?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </section>
-  </main>
-
-  <aside>
-    <div class="frases-amor">
-      <h3>Te sigo eligiendo</h3>
-      <ul>
-        <li>Porque después de todo, tú siempre serás mi historia favorita.</li>
-        <li>La mejor versión de mí solo existe si estás en ella.</li>
-      </ul>
-    </div>
-  </aside>
-
-  <footer>
-    <p>Gracias por existir. Si algo bello ha tenido mi vida, sin duda, ha sido amarte a ti.</p>
-    <div class="firma">David</div>
-  </footer>
-
-  <script>
-    function mostrarCarta() {
-      document.getElementById("cartaCompleta").style.display = "block";
-    }
-  </script>
+    <footer>
+      Con todo mi amor,<br>
+      <span class="firma">David ♥</span><br>
+      <a href="https://www.facebook.com/ileana.vgsl" target="_blank" style="color:white; text-decoration:underline;">Tu Facebook</a>
+    </footer>
+  </div>
 </body>
 </html>
